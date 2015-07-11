@@ -129,7 +129,15 @@ var str = 'this is my sentence';
 //Write a function called reverse that takes a given str as it's only argument and returns that string after it's been reversed
 
   //Code Here
+function reverse(str) {
+    var reversedString;
+    for (var i = str.length - 1; i >= 0; i--) {
+        reversedString += str[i];
+    }
+    return reversedString;
+}
 
+reverse(str);
 
 //Next Problem
 
