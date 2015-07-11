@@ -205,7 +205,16 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 
 //Code Here
 
+function addTen(numbers) {
 
+	for (var i = 0; i < numbers.length; i++) {
+		numbers[i] = Number(numbers[i]) + 10;
+	}
+
+	return numbers;
+}
+
+addTen(numbers);
 
 //Next Problem
 
@@ -226,6 +235,17 @@ for (var i = 0; i < num2; i++) {
 
 //Code Here
 
+function longestArray(arr1, arr2) {
+	if (arr1.length > arr2.length) {
+		return arr1;
+	} else if (arr1.length === arr2.length) {
+		return "Nice work. You have two equal arrays."
+	} else {
+		return arr2;
+	}
+}
+
+longestArray(arr1, arr2);
 
 /*As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example)
@@ -234,7 +254,19 @@ for (var i = 0; i < num2; i++) {
 
 //Code Here
 
+function both(arr1, arr2) {
 
+	var bothArray = [];
+
+	for (var i = 0; i < arr1.length; i++) {
+		bothArray.push(arr1[i]);
+	}
+	for (var i = 0; i < arr2.length; i++) {
+		bothArray.push(arr2[i]);
+	}
+
+	return bothArray;
+}
 
 
 //NEXT PROBLEM
@@ -273,6 +305,8 @@ array with those four objects. After that console.log the length of the Array an
 sure that it's equal to 4. */
 
 //Code Here
+
+devMountainEmployees.push(tyler, cahlan, ryan, colt);
 
 /*Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
 Loop through your devMountainEmployees until you find cahlan, then remove him from the array.*/
@@ -317,6 +351,8 @@ of Data is to have an Array full of objects. */
 
 //Code Here
 
+var users = [];
+
 /*Now add three user objects to your users array. Each user object should contain the
 following properties. name, email, password, username.*/
 
@@ -327,6 +363,23 @@ var user1 = {
 	password: 'iLoveJavaScript',
 	username: 'infiniateLoop'
 };
+
+var user2 = {
+	name: 'Dan Seethaler',
+	email: 'dman@gmail.com',
+	password: 'pword333',
+	username: 'theman'
+};
+
+var user3 = {
+	name: 'Jake Seethaler',
+	email: 'jman@gmail.com',
+	password: 'pword1234',
+	username: 'numOneSon'
+};
+
+var users = [];
+users.push(user1, user2, user3);
 
 //Your Code Here
 
@@ -339,5 +392,11 @@ objects until you find Tyler's account (use tylermcginnis33@gmail.com to find hi
 Once you find the particular index he's located in, delete him from the array.*/
 
 //Code Here
+
+for (var i = 0; i < users.length; i++) {
+	if (users[i].email === "tylermcginnis33@gmail.com") {
+		users.splice([i], 1);
+	}
+}
 
 //The activity we just did is very much how data works in 'the real world'.
