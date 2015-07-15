@@ -313,7 +313,11 @@ Loop through your devMountainEmployees until you find cahlan, then remove him fr
 
 //Code Here
 
-
+for (var i = devMountainEmployees.length - 1; i >= 0; i--) {
+	if (devMountainEmployees[i].name === "cahlan") {
+		devMountainEmployees.splice([i],1)
+	}
+}
 
 
 //NEXT PROBLEM
